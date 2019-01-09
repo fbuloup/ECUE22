@@ -1,4 +1,4 @@
-# Le contenu des quatre premières séquences
+# Le contenu des séquences
 * [Séquence I](https://www.overleaf.com/read/jfxsrwgpqfhm)
 * [Séquence II](https://www.overleaf.com/read/pddpsqkxtmdk)
 * [Séquence III](https://www.overleaf.com/read/tyxqvmxvvfwc)
