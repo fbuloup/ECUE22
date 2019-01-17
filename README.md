@@ -45,3 +45,4 @@ title('Fonctions sinus de plusieurs fréquences');
 xlabel('t (temps en seconde)');
 ylabel({'\color{red}s1(t)';'\color{blue}s2(t)';'\color{magenta}s3(t)'});
 ```
+![image 2](/S1E2_image2.png "Logo Title Text 1")
