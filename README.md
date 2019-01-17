@@ -24,7 +24,10 @@ plot(theta, cos(theta), 'r', theta, sin(theta), 'b');
 title('Fonctions sinus et cosinus');
 xlabel('\theta (angle en radian)');
 ylabel({'\color{red}cos(\theta)';'\color{blue}sin(\theta)'});
+```
+![image 1](/S1E2_image1.png "Logo Title Text 1")
 
+```Matlab
 %% Sinusoïdes de plusieurs fréquences
 % 100 points répartis sur une seconde
 Te = 1/100; 
