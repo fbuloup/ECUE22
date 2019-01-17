@@ -30,7 +30,7 @@ ylabel({'\color{red}cos(\theta)';'\color{blue}sin(\theta)'});
 ```Matlab
 %% Sinusoïdes de plusieurs fréquences
 % 100 points répartis sur une seconde
-Te = 1/100; 
+Te = 1/100; % C'est la période d'échantillonnage
 % Création du vecteur temporel
 t = 0:Te:1-Te;
 % Création des sinusoïdes
