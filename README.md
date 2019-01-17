@@ -9,12 +9,12 @@
 
 
 ```matlab
-%% SÈquence I Exercice II
+%% Séquence I Exercice II
 
 clear all, close all, clc;
 
 %% Tracer sin et cos
-% CrÈation du vecteur angulaire
+% Création du vecteur angulaire
 theta = -6*pi:.001:6*pi;
 % Affichage avec titres
 plot(theta, cos(theta), 'r', theta, sin(theta), 'b');
@@ -22,7 +22,7 @@ title('Fonctions sinus et cosinus');
 xlabel('\theta (angle en radian)');
 ylabel({'\color{red}cos(\theta)';'\color{blue}sin(\theta)'});
 
-%% SinusoÔdes de plusieurs frÈquences
+%% Sinusoïdes de plusieurs fréquences
 % 100 points rÈpartis sur une seconde
 Te = 1/100; 
 % CrÈation du vecteur temporel
@@ -38,5 +38,4 @@ plot(t, s1, 'r', t, s2, 'b', t, s3, 'm');
 title('Fonctions sinus de plusieurs frÈquences');
 xlabel('t (temps en seconde)');
 ylabel({'\color{red}s1(t)';'\color{blue}s2(t)';'\color{magenta}s3(t)'});
-
 ```
