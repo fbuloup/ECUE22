@@ -9,7 +9,7 @@
 
 # Les exercices
 
-## Séquence I [:open_file_folder:](/S1E1.pdf)
+## Séquence I [:open_file_folder:](/S1E2.pdf)
 ```matlab
 %% Séquence I Exercice II
 
