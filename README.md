@@ -15,7 +15,8 @@
 %% Séquence I Exercice II
 
 clear all, close all, clc;
-
+for i=1:10
+end
 %% Tracer sin et cos
 % Création du vecteur angulaire
 theta = -6*pi:.001:6*pi;
