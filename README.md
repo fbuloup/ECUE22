@@ -7,7 +7,9 @@
 * [Séquence VI : Introduction au filtrage](https://www.overleaf.com/read/kbhysrdhjjzw)
 * [Séquence VII : Contrôle continu final](https://www.overleaf.com/read/xhctcfpcgcqb)
 
+# Les exercices
 
+## Séquence I [:open_file_folder:](S1E1.pdf)
 ```matlab
 %% Séquence I Exercice II
 
