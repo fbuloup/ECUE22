@@ -11,7 +11,7 @@
 
 ## Séquence I 
 ### Exercice II [:open_file_folder:](/S1E2.pdf)
-```matlab
+```Matlab
 %% Séquence I Exercice II
 
 clear all, close all, clc;
