@@ -23,11 +23,11 @@ xlabel('\theta (angle en radian)');
 ylabel({'\color{red}cos(\theta)';'\color{blue}sin(\theta)'});
 
 %% Sinusoïdes de plusieurs fréquences
-% 100 points rÈpartis sur une seconde
+% 100 points répartis sur une seconde
 Te = 1/100; 
-% CrÈation du vecteur temporel
+% Création du vecteur temporel
 t = 0:Te:1-Te;
-% CrÈation des sinusoÔdes
+% Création des sinusoïdes
 s1 = sin(2*pi*1*t);
 s2 = sin(2*pi*2*t);
 s3 = sin(2*pi*5*t);
@@ -35,7 +35,7 @@ s3 = sin(2*pi*5*t);
 figure;
 % Affichage avec titres
 plot(t, s1, 'r', t, s2, 'b', t, s3, 'm');
-title('Fonctions sinus de plusieurs frÈquences');
+title('Fonctions sinus de plusieurs fréquences');
 xlabel('t (temps en seconde)');
 ylabel({'\color{red}s1(t)';'\color{blue}s2(t)';'\color{magenta}s3(t)'});
 ```
