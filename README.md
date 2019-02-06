@@ -4,7 +4,7 @@
 * [Séquence III : Signal discret - Aspect temporel](https://www.overleaf.com/read/tyxqvmxvvfwc)
 * [Séquence IV : Signal discret - Aspect fréquentiel](https://www.overleaf.com/read/gyybtqwvbtjs)
 * [Séquence V : Signal discret - Aspect fréquentiel](https://www.overleaf.com/read/bdnnpcnstbpg)
-* [Séquence VI : Introduction au filtrage](https://www.overleaf.com/read/kbhysrdhjjzw)
+* [Séquence VI : Introduction au filtrage](SEQUENCE_VI.pdf)
 * [Séquence VII : Contrôle continu final](https://www.overleaf.com/read/xhctcfpcgcqb)
 
 # Les exercices
