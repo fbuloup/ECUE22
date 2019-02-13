@@ -124,3 +124,40 @@ xlabel('f');
 ylabel('Phase');
 title('Spectre de phase');
 ```
+
+## Séquence VI
+```matlab
+% Séquence VI Exercice I
+clear all, close all, clc;
+
+% Création du vecteur temporel
+Fe = 4;
+Te = 1/Fe;
+t = 0:Te:10;
+
+% Signal
+e = 3 + sin(2*pi*t);
+
+% Affichage du signal
+plot(t, e);
+title('Signal en fonction du temps');
+xlabel('t (s)');
+ylabel('Amplitude');
+
+% Définition des vecteurs a et b pour le filtre moyenneur sur 4 points
+b = [1/4, 1/4, 1/4, 1/4];
+a = [1];
+
+% Filtrage
+s_moyenne = filter(b, a, e);
+
+% Affichage du signal filtré
+hold on
+plot(t, s_moyenne);
+
+% Filtre dérivateur
+a = [1];
+b = [1/Te, -1/Te];
+s_derive = filter(b, a, e);
+plot(t, s_derive);
+```
