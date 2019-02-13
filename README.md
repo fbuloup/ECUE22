@@ -58,20 +58,20 @@ clear all, close all, clc;
 nbSamples = length(signal);
 
 % FFT du signal
-fftSignal = fftshift(fft(signal))/nbSamples;
+fftSignal = fftshift(fft(signal))/nbSamples; % On utilise fftshift puisque spectre bilatéral
 modFFTSignal = abs(fftSignal);
 phaseFFTSignal = angle(fftSignal);
 
-% Contruction du vecteur frequentiel en monolateral
+% Contruction du vecteur frequentiel en bilatéral
 df = Fe/nbSamples;
 if(mod(nbSamples, 2) == 0)
     % Pair
     f = -Fe/2 : df : Fe/2 - df;
-    N =  nbSamples;
+    N =  nbSamples; % Le nb echantillons pour affichage n'est pas modifié
 else
     % Impair
     f = -Fe/2 + df/2 : df : Fe/2 - df + df/2;
-    N =  nbSamples;
+    N =  nbSamples; % Le nb echantillons pour affichage n'est pas modifié
 end
     
 % Affichage 
@@ -96,7 +96,7 @@ clear all, close all, clc;
 nbSamples = length(signal);
 
 % FFT du signal
-fftSignal = fft(signal)/nbSamples;
+fftSignal = fft(signal)/nbSamples; % Inutile d'utiliser fftshift
 modFFTSignal = abs(fftSignal);
 phaseFFTSignal = angle(fftSignal);
 
@@ -105,11 +105,11 @@ df = Fe/nbSamples;
 if(mod(nbSamples, 2) == 0)
     % Pair
     f = 0 : df : Fe/2 - df;
-    N =  nbSamples/2;
+    N =  nbSamples/2; % Modification du nb echantillons pour affichage
 else
     % Impair
     f = 0 : df : Fe/2 - df + df/2;
-    N =  (nbSamples + 1)/2;
+    N =  (nbSamples + 1)/2; % Modification du nb echantillons pour affichage
 end
     
 % Affichage 
