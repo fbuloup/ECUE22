@@ -46,3 +46,81 @@ xlabel('t (temps en seconde)');
 ylabel({'\color{red}s1(t)';'\color{blue}s2(t)';'\color{magenta}s3(t)'});
 ```
 ![image 2](/S1E2_image2.png "Logo Title Text 1")
+
+## Séquence V
+### Spectre bilatéral de la note MI
+```matlab
+%% Tracé du spectre bilateral de la note
+clear all, close all, clc;
+
+[signal, Fe] = audioread('note.wav');
+% Nombre d'échantillons
+nbSamples = length(signal);
+
+% FFT du signal
+fftSignal = fftshift(fft(signal))/nbSamples;
+modFFTSignal = abs(fftSignal);
+phaseFFTSignal = angle(fftSignal);
+
+% Contruction du vecteur frequentiel en monolateral
+df = Fe/nbSamples;
+if(mod(nbSamples, 2) == 0)
+    % Pair
+    f = -Fe/2 : df : Fe/2 - df;
+    N =  nbSamples;
+else
+    % Impair
+    f = -Fe/2 + df/2 : df : Fe/2 - df + df/2;
+    N =  nbSamples;
+end
+    
+% Affichage 
+subplot(2,1,1);
+stem(f, modFFTSignal);
+xlabel('f');
+ylabel('Amplitude');
+title('Spectre d''amplitude');
+subplot(2,1,2);
+stem(f, phaseFFTSignal);
+xlabel('f');
+ylabel('Phase');
+title('Spectre de phase');
+```
+### Spectre monolatérale de la note MI
+```matlab
+%% Tracé du spectre monolateral de la note
+clear all, close all, clc;
+
+[signal, Fe] = audioread('note.wav');
+% Nombre d'échantillons
+nbSamples = length(signal);
+
+% FFT du signal
+fftSignal = fft(signal)/nbSamples;
+modFFTSignal = abs(fftSignal);
+phaseFFTSignal = angle(fftSignal);
+
+% Contruction du vecteur frequentiel en monolateral
+df = Fe/nbSamples;
+if(mod(nbSamples, 2) == 0)
+    % Pair
+    f = 0 : df : Fe/2 - df;
+    N =  nbSamples/2;
+else
+    % Impair
+    f = 0 : df : Fe/2 - df + df/2;
+    N =  (nbSamples + 1)/2;
+end
+    
+% Affichage 
+subplot(2,1,1);
+stem(f, [modFFTSignal(1); 2*modFFTSignal(2:N)]);
+xlabel('f');
+ylabel('Amplitude');
+title('Spectre d''amplitude');
+subplot(2,1,2);
+stem(f, phaseFFTSignal(1:N));
+xlabel('f');
+ylabel('Phase');
+title('Spectre de phase');
+```
